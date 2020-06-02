@@ -1,0 +1,6 @@
+<p>更新</p>
+<%= form_with model: @item, local: true do |f| %>
+  <p>商品名: <%= f.text_field :name %></p>
+  <p>値段: <%= f.text_field :price %></p>
+  <%= f.submit "送信" %>
+<% end %>

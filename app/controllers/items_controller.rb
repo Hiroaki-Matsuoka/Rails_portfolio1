@@ -10,7 +10,21 @@ before_action :move_to_index, except: :index
   end
 
   def create
-    Item.create(name: item_params[:name], price: item_params[:price], user_id: current_user.id)
+    Item.create(
+      name: item_params[:name],
+      price: item_params[:price],
+      user_id: current_user.id,
+      image_name: "default_item.jpg"
+     )
+  end
+
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    item = Item.find(params[:id])
+    item.update(item_params)
   end
 
   def show

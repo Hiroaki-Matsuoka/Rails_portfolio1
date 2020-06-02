@@ -14,7 +14,7 @@
         <tbody>
           <tr>
             <th scope="row"><%= item.id %></th>
-            <td><%= item.name %> : <%= link_to "詳細", item_path(item.id) %></td>
+            <td><%= item.name %> : <%= link_to "詳細", item_path(item.id) %> <%= link_to "編集", edit_item_path(item.id) %></td>
             <td><%= item.price %></td>
             <td><%= item.user.nickname.present? ? "購入者#{item.user.nickname}" : "会員No.#{item.user.id}"%></td>
           </tr>
