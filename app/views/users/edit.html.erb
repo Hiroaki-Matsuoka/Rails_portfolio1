@@ -2,5 +2,7 @@
 <%= form_with model: @user, local: true do |f| %>
   <p>お名前:<%= f.text_field :name %></p>
   <p>年齢:<%= f.text_field :age %></p>
+  <p>住所:<%= f.text_field :address %></p>
+  <p>メールアドレス:<%= f.text_field :email %></p>
   <%= f.submit "送信" %>
 <% end %>
