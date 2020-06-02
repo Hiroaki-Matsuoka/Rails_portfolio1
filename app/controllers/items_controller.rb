@@ -13,6 +13,10 @@ before_action :move_to_index, except: :index
     Item.create(name: item_params[:name], price: item_params[:price], user_id: current_user.id)
   end
 
+  def show
+    @item = Item.find(params[:id])
+  end
+
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end

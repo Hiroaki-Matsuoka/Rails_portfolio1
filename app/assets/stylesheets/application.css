@@ -11,3 +11,14 @@
  * It is generally better to create a new file per style scope.
  *
  */
+
+ body {
+   background-image: url("/images/strvback.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   color: white;
+ }
+
+ .bg-color {
+   background-color: rgba(0, 0, 0, 0.4);
+ }
