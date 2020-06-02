@@ -1,9 +1,26 @@
 <div class="bg-color">
   <h1>購入商品一覧</h1>
   <% if user_signed_in? %>
-    <% @items.each do |item| %>
-      <p><%= item.name %>：<%= item.price %> <%= link_to "詳細", item_path(item.id) %>： <%= item.user.nickname.present? ? "購入者#{item.user.nickname}" : "会員No.#{item.user.id}"%></p>
-    <% end %>
+    <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">No.</th>
+        </tr>
+      </thead>
+      <% @items.each do |item| %>
+        <tbody>
+          <tr>
+            <th scope="row"><%= item.id %></th>
+            <td><%= item.name %> : <%= link_to "詳細", item_path(item.id) %></td>
+            <td><%= item.price %></td>
+            <td><%= item.user.nickname.present? ? "購入者#{item.user.nickname}" : "会員No.#{item.user.id}"%></td>
+          </tr>
+        </tbody>
+      <% end %>
+    </table>
   <% else %>
     <p>ログインしてください</p>
   <% end %>
