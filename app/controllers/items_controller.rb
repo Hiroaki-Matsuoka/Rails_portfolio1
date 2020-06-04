@@ -16,6 +16,11 @@ before_action :move_to_index, except: :index
       user_id: current_user.id,
       image_name: "default_item.jpg"
      )
+     if params[:image]
+       @item.image_name = "#{@item.id}.jpg"
+       image = params[:image]
+       File.binwrite("public/item_images/#{@item.image_name}", image.read)
+     end
   end
 
   def edit
@@ -29,6 +34,11 @@ before_action :move_to_index, except: :index
 
   def show
     @item = Item.find(params[:id])
+  end
+
+  def destroy
+    item = Item.find(params[:id])
+    item.destroy
   end
 
   def move_to_index

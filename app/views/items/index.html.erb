@@ -14,13 +14,22 @@
         <tbody>
           <tr>
             <th scope="row"><%= item.id %></th>
-            <td><%= item.name %> : <%= link_to "詳細", item_path(item.id) %> <%= link_to "編集", edit_item_path(item.id) %></td>
+            <td><%= item.name %> : <%= link_to "詳細", item_path(item.id) %> <%= link_to "編集", edit_item_path(item.id) %> <%= link_to "削除", item_path(item.id), method: :delete, data: {confirm: "削除しますか？"} %></td>
             <td><%= item.price %></td>
             <td><%= item.user.nickname.present? ? "購入者#{item.user.nickname}" : "会員No.#{item.user.id}"%></td>
           </tr>
         </tbody>
       <% end %>
     </table>
+    <% @items.each do |item| %>
+     <div class="users-index-item">
+       <div class="user-left">
+         <img src="<%= "/item_images/#{item.image_name}" %>" width="100" height="100">
+       </div>
+       <div class="user-right">
+       </div>
+     </div>
+   <% end %>
   <% else %>
     <p>ログインしてください</p>
   <% end %>

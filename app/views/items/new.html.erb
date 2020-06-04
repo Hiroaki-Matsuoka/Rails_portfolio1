@@ -2,5 +2,7 @@
   <h1>ご購入商品の情報を入力</h1>
   <p>商品名：<%= f.text_field :name %></p>
   <p>値段：<%= f.text_field :price %></p>
+  <p>画像: <%= f.file_field :image %></p>
+  <%= f.submit 'アップロードする' %>
   <input type="submit" value="SENT">
 <% end %>
