@@ -1,6 +1,7 @@
 <p>更新</p>
-<%= form_with model: @item, local: true do |f| %>
+<%= form_with model: @item, local: true, multipart: true do |f| %>
   <p>商品名: <%= f.text_field :name %></p>
   <p>値段: <%= f.text_field :price %></p>
+  <p>画像: <%= f.file_field :image %></p>
   <%= f.submit "送信" %>
 <% end %>
