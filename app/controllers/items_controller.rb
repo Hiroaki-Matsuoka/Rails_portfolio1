@@ -10,30 +10,38 @@ before_action :move_to_index, except: :index
   end
 
   def create
-    Item.create(
+    @item = Item.create(
       name: item_params[:name],
       price: item_params[:price],
       user_id: current_user.id,
-      image_name: "default_item.jpg"
+      image_name: "default_item.jpg",
+      image: item_params[:image]
      )
+
+     if params[:item][:image]
+       @item.image_name = "#{@item.id}.jpg"
+       @item.save
+       image = params[:item][:image]
+       File.binwrite("public/item_images/#{@item.image_name}", image.read)
+     end
 
   end
 
   def edit
-    @item = Item.find(params[:id])
+    @item = Item.find_by(id: params[:id])
   end
 
   def update
-    @item = Item.find(params[:id])
+    @item = Item.find_by(id: params[:id])
     @item.name = params[:name]
     @item.price = params[:price]
     @item.image = params[:image]
     @item.update(item_params)
-    # binding.pry
-    if params[:image]
+
+    if params[:item][:image]
       @item.image_name = "#{@item.id}.jpg"
-      binding.pry
-      image = params[:image]
+      @item.save
+      image = params[:item][:image]
       File.binwrite("public/item_images/#{@item.image_name}", image.read)
     end
   end
