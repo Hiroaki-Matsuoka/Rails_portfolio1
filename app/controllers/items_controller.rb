@@ -15,7 +15,8 @@ before_action :move_to_index, except: :index
       price: item_params[:price],
       user_id: current_user.id,
       image_name: "default_item.jpg",
-      image: item_params[:image]
+      image: item_params[:image],
+      message: item_params[:message]
      )
 
      if params[:item][:image]
@@ -36,6 +37,7 @@ before_action :move_to_index, except: :index
     @item.name = params[:name]
     @item.price = params[:price]
     @item.image = params[:image]
+    @item.message = params[:message]
     @item.update(item_params)
 
     if params[:item][:image]
@@ -62,6 +64,6 @@ before_action :move_to_index, except: :index
   private
 
   def item_params
-    params.require(:item).permit(:name, :price, :image)
+    params.require(:item).permit(:name, :price, :image, :message)
   end
 end
