@@ -1,7 +1,5 @@
 <% @users.each do |user| %>
-  <p>
-    <%= user.nickname %>
-    <%= user.email %>
-  </p>
-  <p><%= link_to'詳細', user_path(user.id) %></p>
+  <p><%= user.nickname %> : <%= user.email %></p>
+  <img src=<%= "/user_images/#{user.image_name}" %> width="150" height="150">
+  <p><%= link_to'詳細', user_path(user.id) %> <%= link_to'編集', edit_user_path(user.id) %></p>
 <% end %>
