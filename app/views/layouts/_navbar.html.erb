@@ -14,10 +14,7 @@
         <a class="nav-link" href="#"><%= link_to "ユーザー一覧", users_path %><span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#"><%= link_to "機材一覧", items_path %><span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><%= link_to '投稿画面へ', new_item_path %></a>
+        <a class="nav-link" href="#"><%= link_to "NEW", items_path %><span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><%= link_to 'マイページへ', user_path(current_user.id) %> </a>

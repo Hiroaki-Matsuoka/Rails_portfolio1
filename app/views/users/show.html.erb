@@ -1,3 +1,5 @@
+<h2><a class="nav-link" href="#"><%= link_to '機材を登録', new_item_path %></a></h2>
+
 <h2>所有機材一覧</h2>
 <% @user.items.each do |item| %>
   <p><%= item.name %>：<%= item.price %></p>
