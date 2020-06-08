@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show, :edit, :update]
   root to: 'items#index'
   resources :items
+  resources :places
 end

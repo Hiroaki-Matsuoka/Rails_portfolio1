@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag "items", :media => "all" %>
+
+<div class="item-show">
+  <p><%= @place.name %></p>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="<%= "/place_images/#{@place.image_name}" %>" height="180" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= @place.name %></h5>
+    <p class="card-text"><%= @place.message %></p>
+    <a href="#" class="btn btn-primary">お気に入り登録</a>
+  </div>
+</div>
