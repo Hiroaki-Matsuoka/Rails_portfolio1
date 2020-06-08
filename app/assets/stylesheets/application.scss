@@ -47,3 +47,16 @@
    margin: 0 8px 10px 8px;
    font-size: 20px;
  }
+
+// フラッシュ
+.alert {
+  text-align: center;
+}
+
+ .alert-notice {
+   @extend .alert-success;
+ }
+
+ .alert-alert {
+   @extend .alert-danger;
+ }
