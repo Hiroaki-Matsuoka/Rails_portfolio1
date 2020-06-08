@@ -1,12 +1,7 @@
-<%= link_to "投稿画面へ", new_user_path %>
 <% @users.each do |user| %>
   <p>
-    <%= user.name %>
-    <%= user.age %>
-    <%= user.address %>
+    <%= user.nickname %>
     <%= user.email %>
-    <%= link_to "削除", user_path(user), method: :delete, data: {confirm: "削除しますか？"} %>
-    <%= link_to "編集", edit_user_path(user) %>
   </p>
-
+  <p><%= link_to'詳細', user_path(user.id) %></p>
 <% end %>
