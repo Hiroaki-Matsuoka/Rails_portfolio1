@@ -1,3 +1,4 @@
 <% @user.items.each do |item| %>
   <p><%= item.name %>：<%= item.price %></p>
+  <img src="/item_images/<%= item.image_name %>" width="150" height="150">
 <% end %>
