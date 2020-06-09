@@ -1,7 +1,42 @@
+<%= stylesheet_link_tag "places", :media => "all" %>
 <h2><a class="nav-link" href="#"><%= link_to '機材を登録', new_item_path %></a></h2>
+<div class="item_list">
+  <h1>所有機材一覧</h1>
+  <div class="users_index">
+    <% @user.items.each do |item| %>
+      <figure class="figure">
+        <div class="photo_title">
+          <p><%= item.name %></p>
+        </div>
+        <div class="card_height">
+          <img src=<%= "/item_images/#{item.image_name}" %> class="figure-img img-fluid rounded" alt="item_images" width="200" height="300">
+        </div>
+        <figcaption class="figure-caption">¥<%= item.price %></figcaption>
+        <div class="">
+          <p><%= link_to'所有機材', item_path(item.id) %> <%= link_to'編集', edit_item_path(item.id) %></p>
+        </div>
+      </figure>
+    <% end %>
+  </div>
+</div>
 
-<h2>所有機材一覧</h2>
-<% @user.items.each do |item| %>
-  <p><%= item.name %>：<%= item.price %></p>
-  <img src="/item_images/<%= item.image_name %>" width="150" height="150">
-<% end %>
+<div class="cafe_list">
+  <h1>おすすめカフェ一覧</h1>
+  <div class="users_index">
+    <% @user.places.each do |place| %>
+      <figure class="figure">
+        <div class="photo_title">
+          <p><%= place.name %></p>
+        </div>
+        <div class="card_height">
+          <img src=<%= "/place_images/#{place.image_name}" %> class="figure-img img-fluid rounded" alt="place_images" width="200" height="300">
+        </div>
+        <figcaption class="figure-caption"><%= place.message %></figcaption>
+        <div class="">
+          <p><%= link_to'カフェ', place_path(place.id) %> : <%= link_to'編集', edit_place_path(place.id) %></p>
+        </div>
+      </figure>
+    <% end %>
+  </div>
+
+</div>

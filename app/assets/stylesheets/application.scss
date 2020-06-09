@@ -19,6 +19,7 @@
    background-size: cover;
    background-repeat: no-repeat;
    color: white;
+   font-family: 'Anton', sans-serif;
  }
 
  a {
@@ -47,6 +48,20 @@
    margin: 0 8px 10px 8px;
    font-size: 20px;
  }
+
+// 更新後の表示
+ .to-index > a {
+   color: white;
+   font-size: 24px;
+ }
+
+ .finished > h1 {
+   font-size: 24px;
+   color: white;
+ }
+
+ // ユーザー詳細画面
+
 
 // フラッシュ
 .alert {

@@ -1,10 +1,10 @@
-<%= stylesheet_link_tag "items", :media => "all" %>
+<%= stylesheet_link_tag "places", :media => "all" %>
 
 <div class="item-show">
-  <p><%= @place.name %></p>
+  
 </div>
-<div class="card" style="width: 18rem;">
-  <img src="<%= "/place_images/#{@place.image_name}" %>" height="180" class="card-img-top" alt="...">
+<div class="show_card">
+  <img src="<%= "/place_images/#{@place.image_name}" %>" class="card-img-top" alt="..." width="500" height="450">
   <div class="card-body">
     <h5 class="card-title"><%= @place.name %></h5>
     <p class="card-text"><%= @place.message %></p>

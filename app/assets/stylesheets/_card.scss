@@ -1,0 +1,33 @@
+$linkColor: #ffffff;
+
+@mixin card {
+  display: flex;
+  margin: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 4px;
+  width: 300px;
+  height: 400px;
+
+  a {
+    color: $linkColor;
+  }
+
+  .photo_title {
+    font-size: 24px;
+  }
+
+  .card_height {
+    height: 15rem;
+  }
+}
+
+figure {
+  @include card;
+}
+
+.users_index {
+  margin: 0 auto;
+  text-align: center;
+  width: 1600px;
+}

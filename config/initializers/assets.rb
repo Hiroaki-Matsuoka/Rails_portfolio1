@@ -15,3 +15,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( home.scss )
 
 Rails.application.config.assets.precompile += %w( items.scss )
+Rails.application.config.assets.precompile += %w( places.scss )
