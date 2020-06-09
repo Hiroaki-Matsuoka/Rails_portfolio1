@@ -39,8 +39,17 @@ class UsersController < ApplicationController
     user.destroy
   end
 
+  def search
+    user_search = UserSearch.new(params_user_search)
+    @users = user_search.execute
+  end
+
   private
   def user_params
     params.require(:user).permit(:name, :age, :address, :email, :image, :nickname)
+  end
+
+  def params_user_search
+    params.permit(:search_name, :search_email)
   end
 end
