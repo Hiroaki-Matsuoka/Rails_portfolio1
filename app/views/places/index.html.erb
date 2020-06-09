@@ -1,8 +1,17 @@
-<% @places.each do |place| %>
-<p><%= place.name %></p>
-<p><%= place.message %></p>
-<img src="<%= "/place_images/#{place.image_name}" %>" width="150" height="150">
-<%= link_to'編集', edit_place_path(place.id) %>
-<%= link_to'詳細', place_path(place.id) %>
-<%= link_to "削除", place_path(place.id), method: :delete, data: {confirm: "削除しますか？"} %>
-<% end %>
+<%= stylesheet_link_tag "places", :media => "all" %>
+
+<div class="users_index">
+  <% @places.each do |place| %>
+    <figure class="figure">
+      <div class="photo_title">
+        <p><%= place.name %></p>
+      </div>
+      <div class="card_height">
+        <img src=<%= "/place_images/#{place.image_name}" %> class="figure-img img-fluid rounded" alt="place_images" width="200" height="300">
+      </div>
+      <div class="">
+        <p><%= link_to'詳細', place_path(place.id) %> <%= link_to'編集', edit_place_path(place.id) %><%= link_to "削除", place_path(place.id), method: :delete, data: {confirm: "削除しますか？"} %></p>
+      </div>
+    </figure>
+  <% end %>
+</div>

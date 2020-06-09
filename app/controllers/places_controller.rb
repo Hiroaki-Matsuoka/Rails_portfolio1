@@ -9,11 +9,15 @@ class PlacesController < ApplicationController
   end
 
   def create
-    @place = Place.create(place_params)
+    @place = Place.create(
+      name: place_params[:name],
+      user_id: current_user.id,
+      image: place_params[:image],
+      message: place_params[:message]
+    )
     if params[:place][:image]
       @place.image_name = "#{@place.id}.jpg"
       @place.save
-      binding.pry
       image = params[:place][:image]
       File.binwrite("public/place_images/#{@place.image_name}", image.read)
     end
