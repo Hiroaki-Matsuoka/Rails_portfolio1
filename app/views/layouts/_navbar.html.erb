@@ -13,17 +13,14 @@
       <li class="nav-item active">
         <a class="nav-link" href="#"><%= link_to "ユーザー一覧", users_path %><span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#"><%= link_to "NEW", items_path %><span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#"><%= link_to "カフェ", places_path %><span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#"><%= link_to "カフェ登録", new_place_path %><span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= link_to 'マイページへ', mypage_users_path %> </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><%= link_to 'マイページへ', user_path(current_user.id) %> </a>
+        <a class="nav-link" href="#"><%= link_to 'カフェ一覧', places_path %> </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= link_to 'カフェ登録', new_place_path %> </a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></a>
@@ -37,17 +34,5 @@
 <% else %>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Cafe after Hill</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"><%= link_to "ログイン", new_user_session_path %><span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">  <%= link_to "新規登録", new_user_registration_path %></a>
-        </li>
-    </div>
   </nav>
 <% end %>

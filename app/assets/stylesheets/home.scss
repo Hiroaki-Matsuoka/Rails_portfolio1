@@ -6,16 +6,40 @@ body {
   color: black;
 }
 
+.top-btn {
+  color: white;
+  &:hover {
+    color: white;
+    opacity: 0.5;
+  }
+}
+
 h1 {
   font-size: 80px;
   color: white;
+  margin-bottom: 16px;
   font-family: 'Dancing Script', cursive;
+}
+
+h4 {
+  color: #ffffff;
+  margin-bottom: 50px;
 }
 
 .container {
   margin: 0 auto;
   text-align: center;
   margin-top: 300px;
+}
+
+.container4 {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.mypage_contents {
+  margin-top: 100px;
 }
 
 .card {

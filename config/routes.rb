@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get '/users/search', to: 'users#search'
-  resources :users
-  root to: 'items#index'
+  resources :users do
+    collection do
+    get :mypage
+    end
+  end
+  root to: 'home#top'
   resources :items
   resources :places
 end
