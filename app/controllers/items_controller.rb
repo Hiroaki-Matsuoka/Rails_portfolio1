@@ -18,7 +18,6 @@ before_action :move_to_index, except: :index
       image: item_params[:image],
       message: item_params[:message]
      )
-     binding.pry
      if params[:item][:image]
        @item.image_name = "#{@item.id}.jpg"
        @item.save

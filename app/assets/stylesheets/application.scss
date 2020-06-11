@@ -14,12 +14,18 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+// 基本設定
+
  body {
    background-image: url("/images/strvback.jpg");
    background-size: cover;
    background-repeat: no-repeat;
    color: white;
    font-family: 'Anton', sans-serif;
+   .mypage_contents {
+     margin: 0 auto;
+   }
+
  }
 
  a {
@@ -32,10 +38,107 @@
    opacity: 0.6;
  }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ li {
+   list-style: none;
+   float: left;
+ }
+
+// マイページ画面
+
+.mypage_contents {
+  display: flex;
+  text-align: center;
+  padding: 0 200px 0 200px;
+  .card {
+    margin: 0px auto;
+  }
+  h5, p {
+    color: black;
+  }
+}
+
+ // ユーザーの詳細画面
+
+ .index-nav {
+   display: flex;
+   ul {
+     margin: 8px auto;
+   }
+ }
+
+ .second_link {
+   font-size: 24px;
+   color: white;
+   padding: 14px 24px;
+   background-color: gray;
+   border-radius: 36px;
+   display: inline-block;
+ }
+
+ .users_index > h1 {
+   color: #ffffff;
+   background-color: #3399FF;
+   border-radius: 8px;
+ }
+
+ .item-list {
+   display: block;
+ }
+
 .navbar-brand {
   font-family: 'Dancing Script', cursive;
   font-size: 24px;
 }
+
+// 一覧
+
+.container2 {
+  width: 700px;
+  float: left;
+}
+
+.container3 {
+  width: 700px;
+  float: left;
+}
+
+.table-container {
+  display: flex;
+}
+
+// 機材一覧
+
+.index-title > h1 {
+  color: #ffffff;
+  background-color: #3399FF;
+  border-radius: 8px;
+  margin: 0 auto;
+  width: 700px;
+}
+
+// カフェ一覧
+
+.place_name {
+  margin: 0;
+}
+
+
+.table-borderless {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 700px;
+  text-align: center;
+  margin: 0 auto;
+  th, td, .show-link {
+    color: #ffffff;
+  }
+}
+
+// 不明
 
  .bg-color {
    background-color: rgba(0, 0, 0, 0.4);

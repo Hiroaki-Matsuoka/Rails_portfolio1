@@ -4,14 +4,14 @@
   <% @users.each do |user| %>
     <figure class="figure">
       <div class="photo_title">
-        <p>User Name <%= user.nickname %></p>
+        <p><%= user.nickname %></p>
       </div>
       <div class="card_height">
         <img src=<%= "/user_images/#{user.image_name}" %> class="figure-img img-fluid rounded" alt="user_images" width="200" height="300">
       </div>
-      <figcaption class="figure-caption"><%= user.email %></figcaption>
+      <figcaption class="figure-caption"><p><%= user.email %></p></figcaption>
       <div class="">
-        <p><%= link_to'詳細', user_path(user.id) %><%= link_to'編集', edit_user_path(user.id) %></p>
+        <p><%= link_to'詳細', user_path(user.id) %> <%= link_to'編集', edit_user_path(user.id) %></p>
       </div>
     </figure>
   <% end %>

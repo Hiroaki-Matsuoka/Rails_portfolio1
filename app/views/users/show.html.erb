@@ -1,41 +1,62 @@
 <%= stylesheet_link_tag "places", :media => "all" %>
-<h2><a class="nav-link" href="#"><%= link_to '機材を登録', new_item_path %></a></h2>
-<div class="item_list">
-  <h1>所有機材一覧</h1>
-  <div class="users_index">
-    <% @user.items.each do |item| %>
-      <figure class="figure">
-        <div class="photo_title">
-          <p><%= item.name %></p>
-        </div>
-        <div class="card_height">
-          <img src=<%= "/item_images/#{item.image_name}" %> class="figure-img img-fluid rounded" alt="item_images" width="200" height="300">
-        </div>
-        <figcaption class="figure-caption">¥<%= item.price %></figcaption>
-        <div class="">
-          <p><%= link_to'所有機材', item_path(item.id) %> <%= link_to'編集', edit_item_path(item.id) %></p>
-        </div>
-      </figure>
-    <% end %>
-  </div>
+<div class="index-nav">
+  <ul>
+    <li><%= link_to '機材を登録', new_item_path, {class: "second_link"} %></li>
+    <li><%= link_to 'カフェを登録', new_place_path, {class: "second_link"} %></li>
+  </ul>
 </div>
 
-<div class="cafe_list">
-  <h1>おすすめカフェ一覧</h1>
-  <div class="users_index">
-    <% @user.places.each do |place| %>
-      <figure class="figure">
-        <div class="photo_title">
-          <p><%= place.name %></p>
-        </div>
-        <div class="card_height">
-          <img src=<%= "/place_images/#{place.image_name}" %> class="figure-img img-fluid rounded" alt="place_images" width="200" height="300">
-        </div>
-        <figcaption class="figure-caption"><%= place.message %></figcaption>
-        <div class="">
-          <p><%= link_to'カフェ', place_path(place.id) %> : <%= link_to'編集', edit_place_path(place.id) %></p>
-        </div>
-      </figure>
-    <% end %>
+<div class="container2">
+  <div class="index-title">
+    <h1>機材一覧</h1>
+  </div>
+  <div class="table-container">
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">機材</th>
+          <th scope="col">価格</th>
+          <th scope="col">詳細</th>
+        </tr>
+      </thead>
+      <% @user.items.each do |item| %>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td><%= item.name %></td>
+          <td>¥<%= item.price %></td>
+          <td><%= link_to'所有機材', item_path(item.id), {class: "show-link"} %> <%= link_to'編集', edit_item_path(item.id), {class: "show-link"} %></td>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
+</div>
+<div class="container3">
+  <div class="index-title">
+    <h1>カフェ一覧</h1>
+  </div>
+  <div class="table-container">
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">カフェ</th>
+          <th scope="col">メッセージ</th>
+          <th scope="col">詳細</th>
+        </tr>
+      </thead>
+      <% @user.places.each do |place| %>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td><%= place.name %></td>
+          <td><%= place.message %></td>
+          <td><%= link_to'所有機材', place_path(place.id), {class: "show-link"} %> <%= link_to'編集', edit_place_path(place.id), {class: "show-link"} %></td>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
   </div>
 </div>

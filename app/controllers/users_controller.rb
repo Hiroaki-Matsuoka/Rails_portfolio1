@@ -39,6 +39,9 @@ class UsersController < ApplicationController
     user.destroy
   end
 
+  def mypage
+  end
+
   def search
     user_search = UserSearch.new(params_user_search)
     @users = user_search.execute

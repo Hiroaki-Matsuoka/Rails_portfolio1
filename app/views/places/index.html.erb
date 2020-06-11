@@ -4,13 +4,14 @@
   <% @places.each do |place| %>
     <figure class="figure">
       <div class="photo_title">
-        <p><%= place.name %></p>
+        <p class="place_name"><%= place.name %></p>
       </div>
       <div class="card_height">
+        <p>投稿者: <%= place.user.nickname %></p>
         <img src=<%= "/place_images/#{place.image_name}" %> class="figure-img img-fluid rounded" alt="place_images" width="200" height="300">
       </div>
       <div class="">
-        <p><%= link_to'詳細', place_path(place.id) %> <%= link_to'編集', edit_place_path(place.id) %><%= link_to "削除", place_path(place.id), method: :delete, data: {confirm: "削除しますか？"} %></p>
+        <p><%= link_to'詳細', place_path(place.id) %> <%= link_to'編集', edit_place_path(place.id) %> <%= link_to "削除", place_path(place.id), method: :delete, data: {confirm: "削除しますか？"} %></p>
       </div>
     </figure>
   <% end %>

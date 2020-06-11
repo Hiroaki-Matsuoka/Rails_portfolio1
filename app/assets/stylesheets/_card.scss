@@ -24,10 +24,20 @@ $linkColor: #ffffff;
 
 figure {
   @include card;
+  float: left;
+  p {
+    color: #ffffff;
+    &:hover {
+      color: #ffffff;
+      opacity: 0.6;
+    }
+  }
+
 }
 
 .users_index {
   margin: 0 auto;
   text-align: center;
   width: 1600px;
+  height: 600px;
 }
