@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # get 'posts/index'
   get 'home/top'
   devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -12,4 +13,6 @@ Rails.application.routes.draw do
   root to: 'home#top'
   resources :items
   resources :places
+  post 'posts/new' => 'posts#create'
+  resources :posts
 end

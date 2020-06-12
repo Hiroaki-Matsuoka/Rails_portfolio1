@@ -1,0 +1,10 @@
+<div class="post_container">
+  <% @posts.each do |post| %>
+    <div class="post_card">
+      <p><%= post.title %></p>
+      <div class="post_message">
+        <p><%= post.message %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
