@@ -1,0 +1,5 @@
+<%= form_with model:@posts, local: true, maltipart: true do |f| %>
+  <p>タイトル: <%= f.text_field :title %></p>
+  <p>投稿内容: <%= f.text_area :message %></p>
+  <p>送信: <%= f.submit '投稿する' %></p>
+<% end %>

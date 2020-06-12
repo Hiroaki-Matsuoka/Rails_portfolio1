@@ -45,3 +45,15 @@ h4 {
 .card {
   float: left;
 }
+
+.mypage_contents {
+  display: flex;
+  text-align: center;
+  padding: 0 200px 0 200px;
+  .card {
+    margin: 0px auto;
+  }
+  h5, p {
+    color: black;
+  }
+}

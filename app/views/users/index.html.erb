@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "places", :media => "all" %>
+<%= stylesheet_link_tag "users", :media => "all" %>
 
 <div class="users_index">
   <% @users.each do |user| %>
@@ -11,7 +11,11 @@
       </div>
       <figcaption class="figure-caption"><p><%= user.email %></p></figcaption>
       <div class="">
+        <% if current_user.id == user.id %>
         <p><%= link_to'詳細', user_path(user.id) %> <%= link_to'編集', edit_user_path(user.id) %></p>
+        <% else %>
+        <p><%= link_to'詳細', user_path(user.id) %></p>
+        <% end %>
       </div>
     </figure>
   <% end %>

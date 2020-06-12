@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "places", :media => "all" %>
+<%= stylesheet_link_tag "users", :media => "all" %>
 <div class="index-nav">
   <ul>
     <li><%= link_to '機材を登録', new_item_path, {class: "second_link"} %></li>
@@ -54,6 +54,33 @@
           <td><%= place.name %></td>
           <td><%= place.message %></td>
           <td><%= link_to'所有機材', place_path(place.id), {class: "show-link"} %> <%= link_to'編集', edit_place_path(place.id), {class: "show-link"} %></td>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
+</div>
+<div class="container5">
+  <div class="index-title">
+    <h1>練習会一覧</h1>
+  </div>
+  <div class="table-container">
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">カフェ</th>
+          <th scope="col">メッセージ</th>
+          <th scope="col">詳細</th>
+        </tr>
+      </thead>
+      <% @user.posts.each do |post| %>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td><%= post.title %></td>
+          <td><%= post.message %></td>
+          <td><%= link_to'所有機材', post_path(post.id), {class: "show-link"} %> <%= link_to'編集', edit_post_path(post.id), {class: "show-link"} %></td>
         </tr>
       </tbody>
       <% end %>

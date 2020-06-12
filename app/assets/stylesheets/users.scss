@@ -1,3 +1,92 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "card";
+@import "showCard";
+
+// ユーザーの詳細画面 users
+
+.index-nav {
+  display: flex;
+  ul {
+    margin: 8px auto;
+  }
+}
+
+.second_link {
+  font-size: 24px;
+  color: white;
+  padding: 14px 24px;
+  background-color: gray;
+  border-radius: 36px;
+  display: inline-block;
+}
+
+.users_index > h1 {
+  color: #ffffff;
+  background-color: #3399FF;
+  border-radius: 8px;
+}
+
+// 一覧users show
+
+.container2 {
+ width: 500px;
+ float: left;
+}
+
+.container3 {
+ width: 500px;
+ float: left;
+}
+
+.container5 {
+ width: 500px;
+ float: left;
+}
+
+.table-container {
+ display: flex;
+}
+
+// マイページ画面 users
+
+// .mypage_contents {
+//   display: flex;
+//   text-align: center;
+//   padding: 0 200px 0 200px;
+//   .card {
+//     margin: 0px auto;
+//   }
+//   h5, p {
+//     color: black;
+//   }
+// }
+
+// 機材カフェ一覧 users
+
+.index-title > h1 {
+  color: #ffffff;
+  background-color: #3399FF;
+  border-radius: 8px;
+  margin: 0 auto;
+  width: 500px;
+}
+
+// カフェ一覧 places
+
+.place_name {
+  margin: 0;
+}
+
+
+.table-borderless {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 700px;
+  text-align: center;
+  margin: 0 auto;
+  th, td, .show-link {
+    color: #ffffff;
+  }
+}
