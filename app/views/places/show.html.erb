@@ -9,5 +9,14 @@
     <h5 class="card-title"><%= @place.name %></h5>
     <p class="card-text"><%= @place.message %></p>
     <a href="#" class="btn btn-primary">お気に入り登録</a>
+    <% if Like.find_by(user_id: current_user.id, place_id: @place.id) %>
+      <%= link_to("/likes/#{@place.id}/destroy", {method: "post"}) do %>
+        <i class="fas fa-heart"></i>
+      <% end %>
+    <% else %>
+      <%= link_to("/likes/#{@place.id}/create", {method: "post"}) do %>
+      <i class="far fa-heart"></i>
+      <% end %>
+    <% end %>
   </div>
 </div>
