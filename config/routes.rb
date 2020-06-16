@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   resources :places
   post 'posts/new' => 'posts#create'
   resources :posts
+  resources :menus
 end
