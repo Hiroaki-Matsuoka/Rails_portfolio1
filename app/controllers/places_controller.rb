@@ -42,6 +42,7 @@ class PlacesController < ApplicationController
   end
 
   def show
+    # placeのidをここで受け取れているのを確認(users show → place show)
     @place = Place.find_by(id: params[:id])
   end
 

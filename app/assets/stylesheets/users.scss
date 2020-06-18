@@ -5,6 +5,10 @@
 @import "card";
 @import "showCard";
 
+body {
+
+}
+
 // ユーザーの詳細画面 users
 
 .index-nav {
@@ -31,19 +35,16 @@
 
 // 一覧users show
 
-.container2 {
- width: 500px;
- float: left;
+.user_infomation {
+  width: 1560px;
+  margin: 0 auto;
 }
 
-.container3 {
+.user_show_cont {
  width: 500px;
  float: left;
-}
-
-.container5 {
- width: 500px;
- float: left;
+ text-align: center;
+ margin: 0 10px;
 }
 
 .table-container {

@@ -4,25 +4,27 @@
 
 </div>
 <div class="show_card">
-  <img src="<%= "/place_images/#{@place.image_name}" %>" class="card-img-top" alt="..." width="500" height="450">
+  <img src="<%= "/place_images/#{@place.image_name}" %>" class="card-img-top" alt="cafe_image" width="500" height="450">
   <div class="card-body">
     <h5 class="card-title"><%= @place.name %></h5>
-    <p class="card-text"><%= @place.message %></p>
-    <p><%= link_to"メニューを登録する", new_menu_path(@place.id) %></p>
-    <a href="#" class="btn btn-primary">お気に入り登録</a>
     <% if Like.find_by(user_id: current_user.id, place_id: @place.id) %>
       <%= link_to("/likes/#{@place.id}/destroy", {method: "post"}) do %>
-        <i class="fas fa-heart"></i>
+        <i class="fas fa-heart"> Favorite!</i>
       <% end %>
     <% else %>
       <%= link_to("/likes/#{@place.id}/create", {method: "post"}) do %>
-      <i class="far fa-heart"></i>
+      <i class="far fa-heart"> お気に入り登録</i>
       <% end %>
     <% end %>
-    <% @place.menus.each do |menu| %>
-      <p><%= menu.title %></p>
-    <% end %>
-    <p>ここに表示</p>
+    <p class="card-text"><%= @place.message %></p>
 
+    <!-- <a href="#" class="btn btn-primary">お気に入り登録</a> -->
+    <%= link_to 'メニューを登録', new_menu_path(@place), {class: "menu_index"} %>
+    <p>メニュー一覧</p>
+    <% @place.menus.each do |menu| %>
+      <div class="menu_one">
+        <p><%= menu.title %> Price :<%= menu.price %>円(税抜) <%= link_to "詳細", menu_path(menu.id) %> <%= link_to"削除", menu_path(menu.id), method: :delete, data: {confirm: "削除しますか?"} %></p>
+      </div>
+    <% end %>
   </div>
 </div>
