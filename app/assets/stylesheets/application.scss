@@ -83,6 +83,10 @@ ul {
   height: 100px;
 }
 
+.menu_one {
+  display: block;
+}
+
 // 不明
 
  .bg-color {
@@ -107,6 +111,16 @@ ul {
    font-size: 24px;
    color: white;
  }
+
+.menu_index {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 2px 8px;
+  color: #ffffff;
+  font-size: 24px;
+  background: blue;
+  border-radius: 8px;
+}
 
  // ユーザー詳細画面
 
