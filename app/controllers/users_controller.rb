@@ -32,6 +32,7 @@ class UsersController < ApplicationController
       image = params[:user][:image]
       File.binwrite("public/user_images/#{@user.image_name}", image.read)
     end
+    redirect_to users_path(@user)
   end
 
   def destroy

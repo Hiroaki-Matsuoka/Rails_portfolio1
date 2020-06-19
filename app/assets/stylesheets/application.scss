@@ -17,7 +17,7 @@
 // 基本設定
 
  body {
-   background-image: url("/images/strvback.jpg");
+   background-image: url("/images/bg-app.jpg");
    background-size: cover;
    background-repeat: no-repeat;
    color: white;
@@ -48,16 +48,14 @@ ul {
    float: left;
  }
 
+.logging_user {
+  margin: 15px 20px 0 0;
+}
+
  .navbar-brand {
   font-family: 'Dancing Script', cursive;
   font-size: 24px;
  }
-
-
-
-
-
-
 
 // 練習会投稿一覧 posts
 
@@ -122,6 +120,9 @@ ul {
   border-radius: 8px;
 }
 
+.place_name_text {
+  text-overflow: ellipsis;
+}
  // ユーザー詳細画面
 
 

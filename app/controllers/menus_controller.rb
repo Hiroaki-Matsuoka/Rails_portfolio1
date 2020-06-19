@@ -2,7 +2,7 @@ class MenusController < ApplicationController
 
   def new
     @menu = Menu.new
-    @place = Place.find_by(id: params[:format])
+    @place = Place.find_by(id: params[:id])
   end
 
   def create
@@ -29,7 +29,7 @@ class MenusController < ApplicationController
   def destroy
     menu = Menu.find(params[:id])
     menu.destroy
-    redirect_to place_path(menu.place_id) 
+    redirect_to place_path(menu.place_id)
   end
 
   private

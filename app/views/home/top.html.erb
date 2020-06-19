@@ -2,46 +2,46 @@
 <!-- <link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> -->
 <% if user_signed_in? %>
   <div class="container4">
-    <h1>Cafe after Hill</h1>
+    <h1>SOCC</h1>
     <h4>ロードレーサーのマッチングアプリ</h4>
   </div>
   <div class="mypage_contents">
     <div class="card" style="width: 18rem;">
-      <img src="/images/inpre.jpg" class="card-img-top" alt="...">
+      <img src="/images/inpre.jpg" class="card-img-top" alt="top_images">
       <div class="card-body">
         <h5 class="card-title">機材インプレッション</h5>
         <p class="card-text">自転車機材のインプレッションを行う事で情報を共有しましょう。</p>
-        <p class="btn btn-primary"><%= link_to'Click!', items_path %></p>
+        <a href="/items" class="btn btn-primary">Click!</a>
       </div>
     </div>
     <div class="card" style="width: 18rem;">
-      <img src="/images/cafe.jpg" class="card-img-top" alt="...">
+      <img src="/images/cafe.jpg" class="card-img-top" alt="top_images">
       <div class="card-body">
         <h5 class="card-title">お気に入りカフェ</h5>
         <p class="card-text">ロングライドの時に立ち寄れるおすすめのカフェを共有しましょう。</p>
-        <p class="btn btn-primary"><%= link_to'Click!', places_path %></p>
+        <a href="/places" class="btn btn-primary">Click!</a>
       </div>
     </div>
     <div class="card" style="width: 18rem;">
-      <img src="/images/meeting.jpg" class="card-img-top" alt="...">
+      <img src="/images/meeting.jpg" class="card-img-top" alt="top_images">
       <div class="card-body">
         <h5 class="card-title">練習会投稿</h5>
         <p class="card-text">練習会を開催して仲間と一緒に走りましょう！</p>
-        <p href="#" class="btn btn-primary"><%= link_to'Click!', posts_path %></p>
+        <a href="/posts" class="btn btn-primary">Click!</a>
       </div>
     </div>
     <div class="card" style="width: 18rem;">
-      <img src="/images/map.jpg" class="card-img-top" alt="...">
+      <img src="/images/map.jpg" class="card-img-top" alt="top_images">
       <div class="card-body">
         <h5 class="card-title">行き先を決める</h5>
         <p class="card-text">行き先が決まらない時はこちらへ！</p>
-        <p href="#" class="btn btn-primary">Click!</p>
+        <a href="/posts" class="btn btn-primary">Click!</a>
       </div>
     </div>
   </div>
 <% else %>
   <div class="container">
-    <h1>Cafe after Hill</h1>
+    <h1>SOCC</h1>
     <h4>ロードレーサーのマッチングアプリ</h4>
     <button type="button" class="btn btn-primary btn-lg btn-block"><%= link_to "ログインする", new_user_session_path, {class: "top-btn"} %></button>
     <button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to "新規登録", new_user_registration_path, {class: "top-btn"} %></button>
