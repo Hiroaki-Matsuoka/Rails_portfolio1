@@ -17,9 +17,7 @@
       <% end %>
     <% end %>
     <p class="card-text"><%= @place.message %></p>
-
-    <!-- <a href="#" class="btn btn-primary">お気に入り登録</a> -->
-    <%= link_to 'メニューを登録', new_menu_path(@place), {class: "menu_index"} %>
+    <%= link_to 'メニューを登録', new_menu_path(id: @place.id), {class: "menu_index"} %>
     <p>メニュー一覧</p>
     <% @place.menus.each do |menu| %>
       <div class="menu_one">

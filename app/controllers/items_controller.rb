@@ -24,7 +24,7 @@ before_action :move_to_index, except: :index
        image = params[:item][:image]
        File.binwrite("public/item_images/#{@item.image_name}", image.read)
      end
-
+     redirect_to item_path(@item)
   end
 
   def edit
@@ -33,10 +33,10 @@ before_action :move_to_index, except: :index
 
   def update
     @item = Item.find_by(id: params[:id])
-    @item.name = params[:name]
-    @item.price = params[:price]
-    @item.image = params[:image]
-    @item.message = params[:message]
+    @item.name = params[:item][:name]
+    @item.price = params[:item][:price]
+    @item.image = params[:item][:image]
+    @item.message = params[:item][:message]
     @item.update(item_params)
 
     if params[:item][:image]
@@ -45,6 +45,7 @@ before_action :move_to_index, except: :index
       image = params[:item][:image]
       File.binwrite("public/item_images/#{@item.image_name}", image.read)
     end
+    redirect_to items_path(@item)
   end
 
   def show
@@ -63,6 +64,6 @@ before_action :move_to_index, except: :index
   private
 
   def item_params
-    params.require(:item).permit(:name, :price, :image, :message)
+    params.require(:item).permit(:name, :price, :image, :message, :image_name)
   end
 end

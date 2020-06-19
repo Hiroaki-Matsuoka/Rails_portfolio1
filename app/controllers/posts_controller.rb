@@ -13,7 +13,7 @@ class PostsController < ApplicationController
       message: post_params[:message],
       user_id: current_user.id
     )
-    # redirect_to("posts_path")
+    redirect_to posts_path
   end
 
 private

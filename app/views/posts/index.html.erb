@@ -1,10 +1,12 @@
-<div class="post_container">
-  <% @posts.each do |post| %>
-    <div class="post_card">
-      <p><%= post.title %></p>
-      <div class="post_message">
-        <p><%= post.message %></p>
-      </div>
+<%= stylesheet_link_tag "posts", :media => "all" %>
+
+<% @posts.each do |post| %>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= post.title %></h5>
+      <p class="card-text"><%= post.message %></p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
-  <% end %>
-</div>
+    <img src="..." class="card-img-top" alt="...">
+  </div>
+<% end %>

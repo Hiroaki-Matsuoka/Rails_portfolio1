@@ -26,6 +26,19 @@ h4 {
   margin-bottom: 50px;
 }
 
+.mypage_contents {
+  display: flex;
+  text-align: center;
+  margin-top: 100px;
+  padding: 0 200px 0 200px;
+  .card {
+    margin: 0px auto;
+  }
+  h5, p {
+    color: black;
+  }
+}
+
 .container {
   margin: 0 auto;
   text-align: center;
@@ -38,22 +51,26 @@ h4 {
   margin-top: 100px;
 }
 
-.mypage_contents {
-  margin-top: 100px;
-}
-
 .card {
   float: left;
 }
 
-.mypage_contents {
-  display: flex;
-  text-align: center;
-  padding: 0 200px 0 200px;
-  .card {
-    margin: 0px auto;
+.home_btn {
+  color: #ffffff;
+  &:hover {
+    opacity: 0.7;
+    color: #ffffff;
   }
-  h5, p {
-    color: black;
-  }
+}
+
+.card-body {
+  height: 200px;
+  position: relative;
+}
+
+a.btn {
+  position: absolute;
+  bottom: 20px;
+  left: 108px;
+  color: #ffffff;
 }

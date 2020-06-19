@@ -21,6 +21,7 @@ class PlacesController < ApplicationController
       image = params[:place][:image]
       File.binwrite("public/place_images/#{@place.image_name}", image.read)
     end
+    redirect_to place_path(@place)
   end
 
   def edit
@@ -39,10 +40,11 @@ class PlacesController < ApplicationController
       image = params[:place][:image]
       File.binwrite("public/place_images/#{@place.image_name}", image.read)
     end
+    redirect_to place_path(@place)
   end
 
+  # placeのidをここで受け取れているのを確認(users show → place show)
   def show
-    # placeのidをここで受け取れているのを確認(users show → place show)
     @place = Place.find_by(id: params[:id])
   end
 

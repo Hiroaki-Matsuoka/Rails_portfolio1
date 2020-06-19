@@ -27,7 +27,7 @@
             <th scope="row"></th>
             <td><%= item.name %></td>
             <td>¥<%= item.price %></td>
-            <td><%= link_to'所有機材', item_path(item.id), {class: "show-link"} %> <%= link_to'編集', edit_item_path(item.id), {class: "show-link"} %></td>
+            <td><%= link_to'Click!', item_path(item.id), {class: "show-link"} %> <%= link_to'編集', edit_item_path(item.id), {class: "show-link"} %></td>
           </tr>
         </tbody>
         <% end %>
@@ -52,8 +52,10 @@
         <tbody>
           <tr>
             <th scope="row"></th>
-            <td><%= place.name %></td>
-            <td><%= place.message %></td>
+            <div class="place_name_text">
+              <td><%= place.name %></td>
+            </div>
+            <td><%= truncate(place.message, length: 13) %></td>
             <td><%= link_to'Click!', place_path(place.id), {class: "show-link"} %> <%= link_to'編集', edit_place_path(place.id), {class: "show-link"} %></td>
           </tr>
         </tbody>
