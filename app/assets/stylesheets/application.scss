@@ -57,30 +57,6 @@ ul {
   font-size: 24px;
  }
 
-// 練習会投稿一覧 posts
-
-.post_container {
-  display: flex;
-}
-.post_card {
-  background-color: #ffffff;
-  width: 200px;
-  height: 200px;
-  border-radius: 16px;
-  float: left;
-  margin: 20px;
-  p {
-    color: black;
-  }
-}
-
-.post_message {
-  border: 1px solid black;
-  border-radius: 16px;
-  width: 180px;
-  height: 100px;
-}
-
 .menu_one {
   display: block;
 }
