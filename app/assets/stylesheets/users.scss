@@ -11,6 +11,26 @@ body {
 
 // ユーザーの詳細画面 users
 
+.users_info {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 500px;
+  margin: 30px auto 0 auto;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.figure {
+  height: 320px;
+  width: 250px;
+  margin: 60px;
+}
+
+.users_show {
+  margin-top: 15px;
+  text-align: center;
+}
+
 .index-nav {
   display: flex;
   ul {
@@ -25,6 +45,11 @@ body {
   background-color: gray;
   border-radius: 36px;
   display: inline-block;
+}
+
+.users_index {
+  // text-align: center;
+
 }
 
 .users_index > h1 {
@@ -50,20 +75,6 @@ body {
 .table-container {
  display: flex;
 }
-
-// マイページ画面 users
-
-// .mypage_contents {
-//   display: flex;
-//   text-align: center;
-//   padding: 0 200px 0 200px;
-//   .card {
-//     margin: 0px auto;
-//   }
-//   h5, p {
-//     color: black;
-//   }
-// }
 
 // 機材カフェ一覧 users
 

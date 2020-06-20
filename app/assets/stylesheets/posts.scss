@@ -16,3 +16,25 @@
 .card-text {
   color: black;
 }
+
+.post_container {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 500px;
+  width: 400px;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.post_title {
+  margin: 20px;
+  h1 {
+    padding-top: 20px;
+  }
+}
+
+.post_message {
+  margin-left:30px;
+  width: 180px;
+  height: 100px;
+}

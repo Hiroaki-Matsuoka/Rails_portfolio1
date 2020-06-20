@@ -1,5 +1,8 @@
 <%= stylesheet_link_tag "users", :media => "all" %>
 
+<div class="users_info">
+<h1>Users</h1>
+</div>
 <div class="users_index">
   <% @users.each do |user| %>
     <figure class="figure">
@@ -8,14 +11,14 @@
       </div>
       <div class="card_height">
         <img src=<%= "/user_images/#{user.image_name}" %> class="figure-img img-fluid rounded" alt="user_images" width="200" height="300">
-      </div>
-      <figcaption class="figure-caption"><p><%= user.email %></p></figcaption>
-      <div class="">
-        <% if current_user.id == user.id %>
-        <p><%= link_to'詳細', user_path(user.id) %> <%= link_to'編集', edit_user_path(user.id) %></p>
-        <% else %>
-        <p><%= link_to'詳細', user_path(user.id) %></p>
-        <% end %>
+        <div class="users_show">
+          <p><%= user.email %></p>
+          <% if current_user.id == user.id %>
+          <p><%= link_to'詳細', user_path(user.id) %> <%= link_to'編集', edit_user_path(user.id) %></p>
+          <% else %>
+          <p><%= link_to'詳細', user_path(user.id) %></p>
+          <% end %>
+        </div>
       </div>
     </figure>
   <% end %>
