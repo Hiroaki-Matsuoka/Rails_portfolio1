@@ -1,7 +1,16 @@
-<%= form_with model:@place, local: true, multipart: true do |f| %>
-<h2>カフェ情報を登録</h2>
-<p>お店の名前 : <%= f.text_field :name %></p>
-<p>おすすめの理由 : <%= f.text_area :message %></p>
-<p>画像 : <%= f.file_field :image %></p>
-<%= f.submit '登録する' %>
-<% end %>
+<%= stylesheet_link_tag "places", :media => "all" %>
+
+<div class="body_place">
+  <div class="place_form">
+    <%= form_with model:@place, local: true, multipart: true do |f| %>
+      <h2>カフェ情報を登録</h2>
+      <p>お店の名前 :
+        <%= f.text_field :name %></p>
+      <p>おすすめの理由 :
+        <%= f.text_area :message, :size=>"31×100" %></p>
+      <p>画像 :
+        <%= f.file_field :image %></p>
+      <%= f.submit '登録する' %>
+    <% end %>
+  </div>
+</div>

@@ -11,80 +11,76 @@
  * It is generally better to create a new file per style scope.
  *
  */
- // Custom bootstrap variables must be set or imported *before* bootstrap.
+// Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
-
 // 基本設定
+body {
+  background-image: url("/images/bg-app.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'Anton', sans-serif;
 
- body {
-   background-image: url("/images/bg-app.jpg");
-   background-size: cover;
-   background-repeat: no-repeat;
-   color: white;
-   font-family: 'Anton', sans-serif;
-   .mypage_contents {
-     margin: 0 auto;
-   }
+  .mypage_contents {
+    margin: 0 auto;
+  }
+}
 
- }
+a {
+  color: black;
+}
 
- a {
-   color: black;
- }
-
- a:hover {
-   color: black;
-   text-decoration: none;
-   opacity: 0.6;
- }
+.nav-item {
+  a:hover {
+    color: black;
+    text-decoration: none;
+    opacity: 0.6;
+  }
+}
 
 ul {
   margin: 0;
   padding: 0;
 }
 
- li {
-   list-style: none;
-   float: left;
- }
+li {
+  list-style: none;
+  float: left;
+}
 
 .logging_user {
   margin: 15px 20px 0 0;
 }
 
- .navbar-brand {
+.navbar-brand {
   font-family: 'Dancing Script', cursive;
   font-size: 24px;
- }
+}
 
 .menu_one {
   display: block;
 }
-
 // 不明
+.bg-color {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 900px;
+  margin: 50px auto 0;
+}
 
- .bg-color {
-   background-color: rgba(0, 0, 0, 0.4);
-   width: 900px;
-   margin: 0 auto;
-   margin-top: 50px;
- }
-
- li {
-   margin: 0 8px 10px 8px;
-   font-size: 20px;
- }
-
+li {
+  margin: 0 8px 10px;
+  font-size: 20px;
+}
 // 更新後の表示
- .to-index > a {
-   color: white;
-   font-size: 24px;
- }
+.to-index > a {
+  color: white;
+  font-size: 24px;
+}
 
- .finished > h1 {
-   font-size: 24px;
-   color: white;
- }
+.finished > h1 {
+  font-size: 24px;
+  color: white;
+}
 
 .menu_index {
   display: inline-block;
@@ -99,18 +95,16 @@ ul {
 .place_name_text {
   text-overflow: ellipsis;
 }
- // ユーザー詳細画面
-
-
+// ユーザー詳細画面
 // フラッシュ
 .alert {
   text-align: center;
 }
 
- .alert-notice {
-   @extend .alert-success;
- }
+.alert-notice {
+  @extend .alert-success;
+}
 
- .alert-alert {
-   @extend .alert-danger;
- }
+.alert-alert {
+  @extend .alert-danger;
+}

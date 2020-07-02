@@ -1,6 +1,47 @@
 // Place all the styles related to the places controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 @import "card";
 @import "showCard";
+
+.body_place {
+  width: auto;
+  height: 900px;
+  position: relative;
+}
+.place_form {
+  background-color: #222;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: 20%;
+  left: 38%;
+  border-radius: 8px;
+  // transform: translateX(60vw);
+  // transform: translateY(10vw);
+  form {
+    padding:50px;
+  }
+}
+
+  h2,
+  p {
+    color: #fff;
+    // display: inline-block;
+  }
+
+  p {}
+
+  .place_image {
+    // cursor: pointer;
+  }
+
+  input[type="text"] {
+        width: 300px;
+        height: 40px;
+    }
+
+    input[type="textarea"] {
+        width: 300px;
+        height: 40px;
+    }

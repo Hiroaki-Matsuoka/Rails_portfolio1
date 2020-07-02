@@ -14,9 +14,9 @@
         <div class="users_show">
           <p><%= user.email %></p>
           <% if current_user.id == user.id %>
-          <p><%= link_to'詳細', user_path(user.id) %> <%= link_to'編集', edit_user_path(user.id) %></p>
+          <p><%= link_to'詳細', user_path(user.id), {class: "user_detail"} %> <%= link_to'編集', edit_user_path(user.id), {class: "user_detail"} %></p>
           <% else %>
-          <p><%= link_to'詳細', user_path(user.id) %></p>
+          <p><%= link_to'詳細', user_path(user.id), {class: "user_detail"} %></p>
           <% end %>
         </div>
       </div>
