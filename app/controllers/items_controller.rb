@@ -45,7 +45,7 @@ before_action :move_to_index, except: :index
       image = params[:item][:image]
       File.binwrite("public/item_images/#{@item.image_name}", image.read)
     end
-    redirect_to items_path(@item)
+    redirect_to users_path
   end
 
   def show
