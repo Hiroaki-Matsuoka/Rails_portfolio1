@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @item = Item.new(name: "CANYON")
   end
 
   def new
