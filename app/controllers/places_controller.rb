@@ -46,6 +46,7 @@ class PlacesController < ApplicationController
   # placeのidをここで受け取れているのを確認(users show → place show)
   def show
     @place = Place.find_by(id: params[:id])
+    @user = User.find_by(id: params[:id])
   end
 
   def destroy

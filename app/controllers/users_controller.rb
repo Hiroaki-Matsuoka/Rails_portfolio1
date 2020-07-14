@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @item = Item.new(name: "CANYON")
+    @user = User.find_by(id: current_user.id)
+    # binding.pry
   end
 
   def new
@@ -15,6 +17,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @places = Place.where(user_id: params[:id])
   end
 
   def edit

@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag "home", :media => "all" %>
-<!-- <link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 <% if user_signed_in? %>
   <div class="container4">
-    <h1>SOCC</h1>
+    <h1>CYCLISTT</h1>
     <h4>ロードレーサーのマッチングアプリ</h4>
   </div>
   <div class="mypage_contents">
@@ -10,7 +10,7 @@
       <img src="/images/inpre.jpg" class="card-img-top" alt="top_images">
       <div class="card-body">
         <h5 class="card-title">機材インプレッション</h5>
-        <p class="card-text">自転車機材のインプレッションを行う事で情報を共有しましょう。</p>
+        <p class="card-text">自転車機材のインプレッションを行う事で情報を共有しよう。</p>
         <a href="/items" class="btn btn-primary">Click!</a>
       </div>
     </div>
@@ -41,7 +41,7 @@
   </div>
 <% else %>
   <div class="container">
-    <h1>SOCC</h1>
+    <h1>CYCLISTT</h1>
     <h4>ロードレーサーのマッチングアプリ</h4>
     <button type="button" class="btn btn-primary btn-lg btn-block"><%= link_to "ログインする", new_user_session_path, {class: "top-btn"} %></button>
     <button type="button" class="btn btn-secondary btn-lg btn-block"><%= link_to "新規登録", new_user_registration_path, {class: "top-btn"} %></button>

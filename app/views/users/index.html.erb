@@ -15,8 +15,13 @@
           <p><%= user.email %></p>
           <% if current_user.id == user.id %>
           <p><%= link_to'詳細', user_path(user.id), {class: "user_detail"} %> <%= link_to'編集', edit_user_path(user.id), {class: "user_detail"} %></p>
+          <p><%= link_to'お気に入り一覧', edit_user_path(user.id), {class: "user_detail"} %></p>
           <% else %>
           <p><%= link_to'詳細', user_path(user.id), {class: "user_detail"} %></p>
+          <p><%= link_to'お気に入り一覧', edit_user_path(user.id), {class: "user_detail"} %></p>
+          <% end %>
+          <% @user.places.each do |p| %>
+            <%= p.name %>
           <% end %>
         </div>
       </div>

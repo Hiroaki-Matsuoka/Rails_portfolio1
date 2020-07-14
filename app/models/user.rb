@@ -4,8 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :items
-  has_many :places
   has_many :posts
+  has_many :likes
+  has_many :places, through: :likes
 
   # attr_accessor :name, :age
   #

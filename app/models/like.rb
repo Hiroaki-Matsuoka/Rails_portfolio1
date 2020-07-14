@@ -5,4 +5,5 @@ class Like < ApplicationRecord
   # validates :post_id, {presence: true}
 
   belongs_to :place
+  belongs_to :user
 end
